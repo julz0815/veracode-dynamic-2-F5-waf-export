@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element maxOccurs="1" minOccurs="0" name="scanner_vulnerabilities"><!--
+ Attack types values:
+* Information Leakage - SSN
+* Predictable Resource Location
+* XPath Injection
+* Set-Cookie does not use HTTPOnly keyword
+* Form caching detected
+* Path Traversal Apache Relative Path
+* Open redirect
+* Login brute force
+* Mixed content found
+* Unsafe CORS configuration
+* Information Leakage - Credit Card
+* Set-Cookie does not use Secure keyword
+* Clickjacking
+* Parameter pollution allowed
+* Path Traversal Windows Relative Path
+* Command Execution
+* Slow HTTP headers
+* Autocomplete not disabled on login form
+* HTTP Response Splitting
+* Secure Cookie set by Insecure Connection
+* Logins sent over unencrypted
+* Cross-site Request Forgery
+* Path Traversal
+* SQL-Injection
+* Cross Site Scripting (XSS)
+* Slow HTTP body
+* Path Traversal Unix Relative Path
+* Large request body allowed
+* Weak clientaccesspolicy.xml or crossdomain.xml policy
+* Forceful Browsing
+* HTTP Request Smuggling Attack
+* Non-browser client
+* Denial of Service
+* Server Side Code Injection
+* Directory Indexing
+* Abuse of Functionality
+* Other Application Attacks
+* Other Application Activity
+* Injection Attempt
+* GWT Parser Attack
+* Parameter Tampering
+* Vulnerability Scan
+* HTTP Parser Attack
+* JSON Parser Attack
+* LDAP Injection
+* Remote File Include
+* Trojan/Backdoor/Spyware
+* Web Scraping
+* Malicious File Upload
+* Brute Force Attack
+* WebSocket Parser Attack
+* XML Parser Attack
+* Authentication/Authorization Attacks
+* Session Hijacking
+* Cache Poisoning
+* Information Leakage
+* Buffer Overflow
+* Detection Evasion
+-->
+
+    <xs:complexType>
+      <xs:attribute name="version" type="xs:string"/>
+      <xs:sequence>
+        <xs:element name="vulnerability">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="1" minOccurs="0" name="attack_type"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="name">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element maxOccurs="1" minOccurs="0" name="url"><!--Request URL-->
+
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="4096"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element maxOccurs="1" minOccurs="0" name="parameter">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element maxOccurs="1" minOccurs="0" name="cookie"/>
+              <xs:element maxOccurs="1" minOccurs="0" name="threat">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="info"/>
+                    <xs:enumeration value="low"/>
+                    <xs:enumeration value="medium"/>
+                    <xs:enumeration value="high"/>
+                    <xs:enumeration value="critical"/>
+                    <xs:enumeration value="urgent"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element maxOccurs="1" minOccurs="0" name="score">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer"/>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element maxOccurs="1" minOccurs="0" name="severity">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="info"/>
+                    <xs:enumeration value="low"/>
+                    <xs:enumeration value="medium"/>
+                    <xs:enumeration value="high"/>
+                    <xs:enumeration value="critical"/>
+                    <xs:enumeration value="urgent"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element maxOccurs="1" minOccurs="0" name="status">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:enumeration value="mitigated"/>
+                    <xs:enumeration value="closed"/>
+                    <xs:enumeration value="open"/>
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element maxOccurs="1" minOccurs="0" name="opened">
+                <xs:simpleType>
+                  <xs:restriction base="xs:integer"/>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
