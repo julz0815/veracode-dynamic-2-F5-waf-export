@@ -6,16 +6,16 @@ The F5 possible values to identify flaws are named as following and I mapped to 
 
 F5 Flaw Category			CWE ID	Veracode CWE Name
  	 	 
-* Other Application Attacks		296	Improper Following of Chain of Trust for Certificate Validation
-* Other Application Attacks		297	Improper Validation of Host-specific Certificate Data
-* Other Application Attacks		298	Improper Validation of Certificate Expiration
-* Other Application Attacks		321	Use of Hard-coded Cryptographic Key
-* Other Application Attacks		326	Inadequate Encryption Strength
-* Other Application Attacks		327	Use of a Broken or Risky Cryptographic Algorithm
-* Other Application Attacks		530	Exposure of Backup File to an Unauthorized Control Sphere
-* Other Application Attacks		16	Configuration
-* Other Application Attacks		642	External Control of Critical State Data
-* Other Application Attacks		757	Selection of Less-Secure Algorithm During Negotiation (Algorithm Downgrade)
+Other Application Attacks		296	Improper Following of Chain of Trust for Certificate Validation
+Other Application Attacks		297	Improper Validation of Host-specific Certificate Data
+Other Application Attacks		298	Improper Validation of Certificate Expiration
+Other Application Attacks		321	Use of Hard-coded Cryptographic Key
+Other Application Attacks		326	Inadequate Encryption Strength
+Other Application Attacks		327	Use of a Broken or Risky Cryptographic Algorithm
+Other Application Attacks		530	Exposure of Backup File to an Unauthorized Control Sphere
+Other Application Attacks		16	Configuration
+Other Application Attacks		642	External Control of Critical State Data
+Other Application Attacks		757	Selection of Less-Secure Algorithm During Negotiation (Algorithm Downgrade)
 Authentication/Authorization Attacks	287	Improper Authentication
 Authentication/Authorization Attacks	285	Improper Authorization
 Authentication/Authorization Attacks	259	Use of Hard-coded Password
